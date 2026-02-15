@@ -1,15 +1,13 @@
-const img2 = "/images/temp2.png";
-const img3 = "/images/temp3.png";
 
 import Card from "./Card/Card";
 
 export default function App() {
   return (
     <div>
-      <Card imageUrl={img3} rarity="legendary" />
-      <Card imageUrl={img2} rarity="rare" />
-      <Card imageUrl={img3} rarity="epic" />
-      <Card imageUrl={img3} rarity="unique" />
+      <Card imageUrl={'https://ingeogeobuk.github.io/temp-card-css/images/temp3.png'} rarity="legendary" />
+      <Card imageUrl={'https://ingeogeobuk.github.io/temp-card-css/images/temp3.png'} rarity="rare" />
+      <Card imageUrl={'https://ingeogeobuk.github.io/temp-card-css/images/temp3.png'} rarity="epic" />
+      <Card imageUrl={'https://ingeogeobuk.github.io/temp-card-css/images/temp3.png'} rarity="unique" />
     </div>
   )
 }
