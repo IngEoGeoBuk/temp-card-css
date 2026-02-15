@@ -5,6 +5,7 @@
   -webkit-user-select: none;
   touch-action: none;
   cursor: grab;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 
   flex-shrink: 0;
   width: 315px;
