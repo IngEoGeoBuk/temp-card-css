@@ -19,8 +19,8 @@
 }
 
 /* ============================================
-   UNIQUE
-   ============================================ */
+     UNIQUE
+     ============================================ */
 .tilt-card--unique {
   --space: 4%;
 }
@@ -56,7 +56,7 @@
     center center;
   background-size: cover, 400% 900%, cover;
   filter: brightness(1) contrast(1) saturate(0.8);
-  mix-blend-mode: color-dodge;
+  mix-blend-mode: screen;
 }
 
 .tilt-card--unique.is-active .tilt-shine-unique::before {
