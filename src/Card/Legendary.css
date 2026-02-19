@@ -93,8 +93,9 @@
   /* 교차 패턴이 잘 보이도록 blend mode 조정 */
   background-blend-mode: exclusion, darken, screen;
 
-  filter: brightness(0.4) contrast(2.2) saturate(1.4);
-  mix-blend-mode: screen;
+  filter:
+    brightness(0.6) contrast(2.2) saturate(1.9);
+  mix-blend-mode: overlay;
 }
 
 /* :after - 컬러풀한 그라디언트 레이어 */
