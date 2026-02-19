@@ -55,7 +55,7 @@
   background-size: 400% 400%, cover;
   background-blend-mode: overlay;
   filter: brightness(1.1) contrast(1.1) saturate(1.2);
-  mix-blend-mode: color-dodge;
+  mix-blend-mode: screen;
 }
 
 .tilt-card--rare.is-active .tilt-shine-rare::before {
