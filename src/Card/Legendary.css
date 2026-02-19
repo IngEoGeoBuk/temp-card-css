@@ -91,10 +91,11 @@
     calc(((var(--background-x) - 50%) * 1.5) + 50%) calc(((var(--background-y) - 50%) * 1.5) + 50%);
 
   /* 교차 패턴이 잘 보이도록 blend mode 조정 */
-  background-blend-mode: exclusion, darken, color-dodge;
+  background-blend-mode: exclusion, darken, screen;
 
-  filter: brightness(0.5) contrast(1.8) saturate(1.6);
-  mix-blend-mode: color-dodge;
+  filter:
+    brightness(0.6) contrast(2.2) saturate(1.9);
+  mix-blend-mode: overlay;
 }
 
 /* :after - 컬러풀한 그라디언트 레이어 */
@@ -138,7 +139,7 @@
 
   background-position: center;
   background-size: 15% 15%, 350% 350%;
-  background-blend-mode: color-dodge;
+  background-blend-mode: screen;
 
   mix-blend-mode: overlay;
   filter: brightness(0.66) contrast(2) saturate(0.5);
