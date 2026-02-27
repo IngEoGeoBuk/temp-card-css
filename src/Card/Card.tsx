@@ -3,16 +3,18 @@ import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import "./Card.css";
 import "./Rare.css";
+import "./Uncommon.css";
 import "./Unique.css";
 import "./Legendary.css";
 import "./Epic.css";
 
 export type CardRarity =
   | "common"
+  | "uncommon"
   | "rare"
   | "unique"
   | "legendary"
-  | "epic"
+  | "epic";
 
 type Props = {
   imageUrl: string;
@@ -58,8 +60,7 @@ export default function Card({ imageUrl, rarity }: Props) {
     const pointerFromTop = pointerY / 100;
     const pointerFromCenter =
       Math.sqrt(
-        Math.pow(pointerFromLeft - 0.5, 2) +
-        Math.pow(pointerFromTop - 0.5, 2)
+        Math.pow(pointerFromLeft - 0.5, 2) + Math.pow(pointerFromTop - 0.5, 2),
       ) * 2;
 
     if (rafIdRef.current !== null) {
@@ -111,9 +112,22 @@ export default function Card({ imageUrl, rarity }: Props) {
         transformPerspective: 800,
       }}
     >
-      <div className="tilt-img" style={{ backgroundImage: `url(${imageUrl})` }} />
+      <div
+        className="tilt-img"
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      />
       <div className="tilt-glare" />
       {rarity === "rare" && <div className="tilt-shine-rare" />}
+      {rarity === "uncommon" && (
+        <video
+          className="tilt-shine-uncommon"
+          src="/images/card/uncommon/sparkles.webm"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+      )}
       {rarity === "unique" && <div className="tilt-shine-unique" />}
       {rarity === "legendary" && <div className="tilt-shine-legendary" />}
       {rarity === "epic" && <div className="tilt-shine-epic" />}
